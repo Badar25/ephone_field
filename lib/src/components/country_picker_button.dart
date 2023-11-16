@@ -47,17 +47,14 @@ class CountryPickerButton extends StatelessWidget {
           isSearchable,
           countries,
           onValuePicked),
-      child: SizedBox(
-        width: width,
-        child: Padding(
-          padding: const EdgeInsets.all(4.0),
+      child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 10.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 '+${initialValue.dialCode}',
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
               ),
               const SizedBox(
                 width: 4.0,
@@ -74,7 +71,6 @@ class CountryPickerButton extends StatelessWidget {
             ],
           ),
         ),
-      ),
     );
   }
 }
